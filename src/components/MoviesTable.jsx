@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import TableHeart from "./common/tableHeader";
+import TableHeader from "./common/tableHeader";
 import TableBody from "./common/tableBody";
 
 class MoviesTable extends Component {
@@ -38,7 +38,7 @@ class MoviesTable extends Component {
           "no data"
         ) : (
           <table className="table">
-            <TableHeart
+            <TableHeader
               columns={this.columns}
               sortColumn={sortColumn}
               onSort={onSort}

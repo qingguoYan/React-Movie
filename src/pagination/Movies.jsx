@@ -66,7 +66,7 @@ class Movies extends Component {
       sortColumn,
     } = this.state;
     if (allMovies.length === 0) return <p>There have zero data</p>;
-    //数据分类123456
+    //数据分类
     const filtered =
       selectedGenre && selectedGenre._id
         ? allMovies.filter((m) => m.genre.name === selectedGenre.name)

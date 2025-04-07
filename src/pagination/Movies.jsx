@@ -16,7 +16,7 @@ class Movies extends Component {
       pageSize: 4,
       currentPage: 1,
       selectedGenre: "",
-      sortColumn: { path: "title", order: "asc" }
+      sortColumn: { path: "title", order: "asc" },
     };
   }
 
@@ -26,27 +26,27 @@ class Movies extends Component {
     this.setState({ movies, genres });
   }
 
-  handleChangeHeart = movie => {
+  handleChangeHeart = (movie) => {
     const movies = [...getMovies()];
     const index = movies.indexOf(movie);
     movies[index].isLike = !movies[index].isLike;
     this.setState({ movies });
   };
 
-  deleteMovie = movie => {
+  deleteMovie = (movie) => {
     deleteMovie(movie._id);
     this.setState({ movies: getMovies() });
   };
 
-  handleSelectPage = page => {
+  handleSelectPage = (page) => {
     this.setState({ currentPage: page });
   };
 
-  handleSelectGenre = genre => {
+  handleSelectGenre = (genre) => {
     this.setState({ selectedGenre: genre, currentPage: 1 });
   };
 
-  handleSortMovies = path => {
+  handleSortMovies = (path) => {
     const sortColumn = { ...this.state.sortColumn };
     if (sortColumn.path === path)
       sortColumn.order = sortColumn.order === "asc" ? "desc" : "asc";
@@ -63,13 +63,13 @@ class Movies extends Component {
       currentPage,
       genres,
       selectedGenre,
-      sortColumn
+      sortColumn,
     } = this.state;
     if (allMovies.length === 0) return <p>There have zero data</p>;
-    //数据分类
+    //数据分类123456
     const filtered =
       selectedGenre && selectedGenre._id
-        ? allMovies.filter(m => m.genre.name === selectedGenre.name)
+        ? allMovies.filter((m) => m.genre.name === selectedGenre.name)
         : allMovies;
     //排序
     const sorted = _.orderBy(filtered, [sortColumn.path], [sortColumn.order]);

@@ -36,7 +36,7 @@ const NavBar = () => {
               Rentals
             </NavLink>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <NavLink className="nav-link" to="/login">
               login
             </NavLink>
@@ -45,7 +45,7 @@ const NavBar = () => {
             <NavLink className="nav-link" to="/register">
               register
             </NavLink>
-          </li>
+          </li> */}
         </ul>
       </div>
     </nav>

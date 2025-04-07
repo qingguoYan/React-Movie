@@ -43,7 +43,7 @@ const NavBar = () => {
           </li>
           <li className="nav-item">
             <NavLink className="nav-link" to="/register">
-              register
+              register999
             </NavLink>
           </li>
         </ul>
